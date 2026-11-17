@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Maria Goretti</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/NavegacionAndFooter.css">
+        <script src="https://kit.fontawesome.com/30134645ab.js"
+            crossorigin="anonymous"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+    </head>
+
+    <body>
+
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="imagenes/logofijo (1).png" alt="logo">
+                </div>
+                <nav class="menu">
+                    <div class="head">
+                        <div class="logo"><img src="imagenes/logofijo (1).png"
+                                alt="logo"></div>
+                        <button type="button" class="close-menu-btn"></button>
+                    </div>
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="contactanos.html">Contactanos</a></li>
+                        <li class="dropdown">
+                            <a href="academico.html">Académico</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="v.html">Nosotros</a>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <ul class="sub-menu">
+                                <li><a href="v.html"><span>Mision y
+                                            Valor</span></a></li>
+                                <li><a href="D.html"><span>Plana
+                                            Docente</span></a></li>
+                                <li><a href="galeria.html"><span>Galeria De
+                                            Imagenes</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="switch">
+                            <i class='bx bxs-sun'></i>
+                            <i class='bx bxs-moon'></i>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <button type="button" class="open-menu-btn">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+
+                    </button>
+
+                </div>
+
+            </div>
+        </header>
+        <section class="portada">
+            <div class="header-content container">
+                <div class="header-txt">
+                    <h1 id="titulo">Bienvenido a <br> <span>Maria
+                            Goretti</span></h1>
+                    <p class="presentacion">En la Institución Educativa privada
+                        Maria Goretti,
+                        estamos
+                        emocionados de compartir nuestro compromiso
+                        con la excelencia educativa y el bienestar de nuestros
+                        estudiantes. ¡Gracias por visitar nuestra
+                        página web y esperamos verte pronto en la Primaria
+                        "Maria Goretti"!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="detalles">
+            <div class="contaner">
+                <div class="box">
+                    <div class="icon">01</div>
+                    <div class="content">
+                        <h3>Inicial</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                            Sequi tempore cum fugiat dolore maxime qui soluta
+                            neque
+                            enim recusandae repudiandae magnam adipisci numquam
+                            laborum, odit optio reprehenderit perferendis omnis!
+                            Laborum!</p>
+                        <a class="boton" href="/academico.html">Ver mas</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">02</div>
+                    <div class="content">
+                        <h3>Primaria</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                            Sequi tempore cum fugiat dolore maxime qui soluta
+                            neque
+                            enim recusandae repudiandae magnam adipisci numquam
+                            laborum, odit optio reprehenderit perferendis omnis!
+                            Laborum!</p>
+                        <a class="boton" href="/primaria.html"">Ver mas</a>
+                    </div>
+
+                </div>
+                <div class="box">
+                    <div class="icon">03</div>
+                    <div class="content">
+                        <h3>Talleres</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit.
+                            Sequi tempore cum fugiat dolore maxime qui soluta
+                            neque
+                            enim recusandae repudiandae magnam adipisci numquam
+                            laborum, odit optio reprehenderit perferendis omnis!
+                            Laborum!</p>
+                        <a class="boton" href="/Talleres.html">Ver mas</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <header class="header-civic" id="header-civic">
+            <div class="mensaje-contenedor">
+                <div id="mensaje" class="mensaje">Cargando...</div>
+            </div>
+        </header>
+
+        <script>
+            fetch('/events')
+                .then(response => response.json())
+                .then(data => {
+                    const mensajeElement = document.getElementById('mensaje');
+                    if (data.date && data.Name_event) {
+                        mensajeElement.textContent = `Hoy es ${data.date} y se celebra el ${data.Name_event}`;
+                    } else if (data.date) {
+                        mensajeElement.textContent = `Hoy (${data.date}) no hay eventos programados`;
+                    } else {
+                        mensajeElement.textContent = 'No hay eventos para hoy';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al obtener los eventos del calendario:', error);
+                    document.getElementById('mensaje').textContent = 'Error al cargar la fecha';
+                });
+        </script>
+        <section class="about">
+
+            <div class="about-content container">
+
+                <div class="about-txt">
+                    <h2>Semilleros Matematicos</h2>
+                    <hr>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Praesentium, asperiores? Incidunt alias ut
+                        nostrum non veniam atque sapiente fuga rem eligendi hic,
+                        at quos rerum quae. Laborum tempore nostrum
+                        autem!
+                    </p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Praesentium, asperiores? Incidunt alias ut
+                        nostrum non veniam atque sapiente fuga rem eligendi hic,
+                        at quos rerum quae. Laborum tempore nostrum
+                        autem!
+                    </p>
+                </div>
+                <div class="container-carousel">
+                    <div class="carruseles" id="slider">
+                        <section class="slider-section">
+                            <img src="/imagenes/imagenM6.png">
+                        </section>
+                        <section class="slider-section">
+                            <img src="/imagenes/imagenM7.png">
+                        </section>
+                        <section class="slider-section">
+                            <img src="/imagenes/imagenM8.png">
+                        </section>
+                    </div>
+                    <div class="btn-left"><i
+                            class='bx bx-chevron-left'></i></div>
+                    <div class="btn-right"><i
+                            class='bx bx-chevron-right'></i></div>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="mision" class="mision">
+            <div class="mision2-text">
+                <h2>¿Por que elegir Maria Goretti?</h2>
+            </div>
+            <main class="mision2">
+                <div class="card">
+                    <div class="face front">
+                        <img src="./imagenes/imagenM6.png" alt>
+                        <h3>Excelencia Académica</h3>
+                    </div>
+                    <div class="face back">
+                        <p>
+                            Gracias al enfoque académico orientado al desarrollo
+                            de habilidades comunicativas, sociales, de
+                            autogestión, pensamiento crítico e investigación,
+                            nuestros alumnos están preparados para integrarse a
+                            la sociedad, y asumir grandes retos.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="face front">
+                        <img src="./imagenes/imagenM7.png" alt>
+                        <h3>Formación Integral</h3>
+                    </div>
+                    <div class="face back">
+                        <p>
+                            Atendemos todas las dimensiones de la persona
+                            desarrollando su formación a nivel intelectual,
+                            cultural, crecimiento espiritual y madurez
+                            emocional. Alentando la participación solidaria y el
+                            esfuerzo deportivo en cada una de las etapas de su
+                            vida.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="face front">
+                        <img src="./imagenes/imagen_2024-04-16_211633390.png"
+                            alt>
+                        <h3>Educamos en Familia</h3>
+                    </div>
+                    <div class="face back">
+                        <p>
+                            Trabajamos en conjunto, familia y colegio, esto
+                            permite que el desarrollo integral de los alumnos se
+                            realice de forma armónica, sólida y completa. Los
+                            padres son los principales educadores y como colegio
+                            los acompañamos en este proceso.
+                        </p>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <section class="about">
+
+            <div class="about-content container">
+
+                <div class="about-txt">
+                    <h2>Contamos con un ciclo de Verano</h2>
+                    <hr>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Praesentium, asperiores? Incidunt alias ut
+                        nostrum non veniam atque sapiente fuga rem eligendi hic,
+                        at quos rerum quae. Laborum tempore nostrum
+                        autem!
+                    </p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Praesentium, asperiores? Incidunt alias ut
+                        nostrum non veniam atque sapiente fuga rem eligendi hic,
+                        at quos rerum quae. Laborum tempore nostrum
+                        autem!
+                    </p>
+                </div>
+                <div class="container-carousel">
+                    <div class="carruseles" id="slider">
+                        <section class="slider-section">
+                            <img src="/imagenes/imagenM6.png">
+                        </section>
+                        <section class="slider-section">
+                            <img src="/imagenes/imagenM7.png">
+                        </section>
+                        <section class="slider-section">
+                            <img src="/imagenes/imagenM8.png">
+                        </section>
+                    </div>
+                    <div class="btn-left"><i
+                            class='bx bx-chevron-left'></i></div>
+                    <div class="btn-right"><i
+                            class='bx bx-chevron-right'></i></div>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="inscripcion">
+            <h1>¡Inscríbete ya!</h1>
+            <h2>Fecha de Inscripción</h2>
+            <table class="inscripcion-tabla">
+                <thead>
+                    <tr>
+                        <th>Fecha de Inscripción</th>
+                        <th>Plazo para Pagar la Matrícula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01/07/2024</td>
+                        <td>31/07/2024</td>
+                    </tr>
+                    <tr>
+                        <td>01/08/2024</td>
+                        <td>31/08/2024</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="boton-contenedor">
+                <a href="/contactanos.html" class="boton">Si tienes dudas da
+                    click AQUI¡¡
+                </a>
+            </div>
+        </section>
+        <section>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.770079661926!2d-76.43408859019758!3d-13.050301887219256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910ff93e7389cecb%3A0xb26152110f61dfbd!2sI.E.Pr%20%22Mar%C3%ADa%20Goretti%22!5e0!3m2!1ses-419!2spe!4v1719472858119!5m2!1ses-419!2spe"
+                    width="100%" height="600" style="border:0;" allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <footer class="pie-pagina">
+            <div class="grupo-1">
+                <div class="box">
+                    <figure>
+                        <a href="#">
+                            <img src="/imagenes/logofijo (1).png"
+                                alt="Logo de SLee Dw">
+                        </a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Odio, ipsa?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Odio, ipsa?</p>
+                </div>
+                <div class="box">
+                    <h2>NUESTRAS REDES SOCIALES</h2>
+                    <div class="red-social">
+                        <a
+                            href="https://www.facebook.com/jaimejose.simontenicela"
+                            class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="grupo-2">
+                <small>2024 <b>© Maria Goretti</b> - Todos los Derechos
+                    Reservados.</small>
+            </div>
+        </footer>
+
+        <script type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="/javascript/ResponsiveNavbar.js"></script>
+        <script src="/javascript/Carrusel.js"></script>
+        <script src="/javascript/Animacion.js"></script>
+        <script src="/javascript/dark.js"></script>
+        <script src="/javascript/portada.js"></script>
+
+    </body>
+
+</html>

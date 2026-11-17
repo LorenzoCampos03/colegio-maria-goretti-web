@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>Image Gallery</title>
+        <link rel="stylesheet" href="/css/galeria.css">
+        <link rel="stylesheet" href="/css/NavegacionAndFooter.css">
+        <script src="https://kit.fontawesome.com/30134645ab.js"
+            crossorigin="anonymous"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="imagenes/logofijo (1).png" alt="logo">
+                </div>
+                <nav class="menu">
+                    <div class="head">
+                        <div class="logo"><img src="imagenes/logofijo (1).png"
+                                alt="logo"></div>
+                        <button type="button" class="close-menu-btn"></button>
+                    </div>
+                    <ul>
+                        <li><a href="../">Inicio</a></li>
+                        <li><a href="contactanos.html">Contactanos</a></li>
+                        <li class="dropdown">
+                            <a href="academico.html">Académico</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="v.html">Nosotros</a>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <ul class="sub-menu">
+                                <li><a href="v.html"><span>Mision y
+                                            Valor</span></a></li>
+                                <li><a href="D.html"><span>Plana
+                                            Docente</span></a></li>
+                                <li><a href="galeria.html"><span>Galeria De
+                                            Imagenes</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="switch">
+                            <i class='bx bxs-sun'></i>
+                            <i class='bx bxs-moon'></i>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <button type="button" class="open-menu-btn">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+
+                    </button>
+
+                </div>
+
+            </div>
+        </header>
+        <section class="general">
+            <div class="ful-img" id="fulImgBox">
+                <img src="imgs/1.jpg" id="fulImg" alt>
+                <span onclick="closeImg()">X</span>
+            </div>
+
+            <div class="img-gallery">
+                <img src="/imagenes/file.jpg" onclick="openFulImg(this.src)"
+                    alt>
+                <img src="/imagenes/galeria2.jpeg"
+                    onclick="openFulImg(this.src)" alt>
+                <img src="/imagenes/galeria5.jpeg"
+                    onclick="openFulImg(this.src)" alt>
+                <img src="/imagenes/galeria6.jpeg"
+                    onclick="openFulImg(this.src)" alt>
+                <img src="/imagenes/galeria7.jpeg"
+                    onclick="openFulImg(this.src)" alt>
+                <img src="/imagenes/file (1).jpg" onclick="openFulImg(this.src)"
+                    alt>
+                <img src="/imagenes/file (2).jpg" onclick="openFulImg(this.src)"
+                    alt>
+                <img src="/imagenes/simulacro.jpeg"
+                    onclick="openFulImg(this.src)" alt>
+                <img src="/imagenes/dechill.jpeg" onclick="openFulImg(this.src)"
+                    alt>
+            </div>
+        </section>
+        <footer class="pie-pagina">
+            <div class="grupo-1">
+                <div class="box">
+                    <figure>
+                        <a href="#">
+                            <img src="/imagenes/logofijo (1).png"
+                                alt="Logo de SLee Dw">
+                        </a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Odio, ipsa?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Odio, ipsa?</p>
+                </div>
+                <div class="box">
+                    <h2>NUESTRAS REDES SOCIALES</h2>
+                    <div class="red-social">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="grupo-2">
+                <small>2024 <b>© Maria Goretti</b> - Todos los Derechos
+                    Reservados.</small>
+            </div>
+        </footer>
+        <script src="/javascript/galeria.js"></script>
+    </body>
+</html>

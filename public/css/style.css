@@ -1,0 +1,926 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+
+.portada {
+    background-image: url(../imagenes/imagenM1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 0;
+}
+
+.portada .carousel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.portada .carousel-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.5s ease;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.header-txt h1 {
+    font-size: 60px;
+    color: #FFFFFF;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+h1#titulo {
+    color: #3859bb;
+}
+
+.presentacion {
+    font-size: 17px;
+    color: #FFFFFF;
+    margin-bottom: 35px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    border-radius: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg,
+            rgb(83, 195, 223) 0%,
+            rgb(60, 55, 105) 100%);
+}
+
+.contaner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.detalles {
+    margin-top: -100px;
+}
+
+.contaner .box {
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background-color: #a2e4e0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+
+.contaner .box .icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+.contaner .box:nth-child(1) .icon {
+    box-shadow: 0 0 0 0 #e91e63;
+    background-color: #e91e63;
+}
+
+.contaner .box:nth-child(1):hover .icon {
+    box-shadow: 0 0 0 400px #e91e63;
+}
+
+.contaner .box:nth-child(2) .icon {
+    box-shadow: 0 0 0 0 #23e629;
+    background-color: #23e629;
+}
+
+.contaner .box:nth-child(2):hover .icon {
+    box-shadow: 0 0 0 400px #23e629;
+}
+
+.contaner .box:nth-child(3) .icon {
+    box-shadow: 0 0 0 0 #2196f3;
+    background-color: #2196f3;
+}
+
+.contaner .box:nth-child(3):hover .icon {
+    box-shadow: 0 0 0 400px #2196f3;
+}
+
+.contaner .box .content {
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.contaner .box:hover .content {
+    color: #fff;
+}
+
+.contaner .box .content h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.contaner .box .content p {
+    margin: 0;
+    padding: 0;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.contaner .box:before {
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .2);
+    z-index: 2;
+}
+
+.about {
+    padding: 10px 0;
+    background-color: #c6e032;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-txt {
+    flex-basis: 50%;
+    padding: 35px;
+}
+
+
+.h2 {
+    font-size: 35px;
+    color: #FFFFFF;
+    margin: 15px 0;
+    line-height: 1;
+}
+
+hr {
+    border: 1px solid #F56349;
+    width: 10%;
+    margin-bottom: 30px;
+
+}
+
+
+i {
+    color: white;
+}
+
+
+#ContePuntos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: #286bc2;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    ;
+    flex-wrap: wrap;
+}
+
+.icon-elem {
+    list-style: none;
+}
+
+.icon {
+    color: white;
+    font-size: 24px;
+    display: inline-block;
+    margin: 5px;
+    transition: 0.5s;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.elemento {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.elemento-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.elemento-icon:hover {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.link h3 {
+    font-size: 17px;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+}
+
+.link a {
+    font-size: 17px;
+    color: #d4d4d4;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container-carousel {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+.carruseles {
+    width: 300%;
+    height: 100%;
+    display: flex;
+
+}
+
+.slider-section {
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+.slider-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0, -50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+.mision {
+    background-color: #ffffff;
+    padding: 40px;
+    color: #1360c5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mision2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.mision2-text {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.mision2-text h2 {
+    font-size: 40px;
+    color: var(--main-color);
+    font-weight: bold;
+    text-shadow: 0 0 5px;
+    line-height: 1.2;
+    font-family: 'Cabin', sans-serif;
+    text-align: center;
+}
+
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+    font-size: 22px;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 20px;
+    display: flex;
+    color: var(--bg-color);
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 2px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: var(--bg-color);
+}
+
+.card .back h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(1000px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container-1 {
+    position: relative;
+    width: 1200px;
+    min-height: 850px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #fff;
+    display: flex;
+
+    border-radius: 10px;
+    background-color: #373c4f;
+}
+
+.left {
+    width: 60%;
+    padding: 20px;
+}
+
+.inscripcion {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inscripcion h1 {
+    text-align: center;
+    color: #d9534f;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.inscripcion h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.inscripcion-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.inscripcion-tabla th,
+.inscripcion-tabla td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.inscripcion-tabla th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.inscripcion-tabla tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.inscripcion-tabla tr:hover {
+    background-color: #ddd;
+}
+
+.boton-contenedor {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #45a049;
+}
+
+.mapa {
+    margin-top: 25px;
+    margin-bottom: -15px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .detalles{
+        margin-top: 0;
+    }
+
+    .header-txt h1 {
+        font-size: 50px;
+    }
+
+    .presentacion {
+        font-size: 16px;
+    }
+
+    .contaner .box {
+        width: 300px;
+        padding: 30px;
+    }
+
+    .portada {
+        min-height: 70vh;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-txt {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .portada {
+        min-height: 60vh;
+    }
+
+    .detalles{
+        margin-top: 0;
+    }
+
+    .plans-content {
+        flex-direction: column;
+    }
+
+    .plan-1 {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .plans hr {
+        width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-txt {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .mision {
+        padding: 20px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .header-txt h1 {
+        font-size: 40px;
+    }
+
+    .presentacion {
+        font-size: 14px;
+    }
+
+    .contaner .box {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container-carousel {
+        width: 100%;
+    }
+
+    .carousel-slide {
+        height: auto;
+    }
+
+    .mision2-text h2 {
+        font-size: 32px;
+        /* Reducir el tamaño del título en pantallas más pequeñas */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .header-txt h1 {
+        font-size: 35px;
+    }
+
+    .detalles{
+        margin-top: 0;
+    }
+
+    .presentacion {
+        font-size: 14px;
+    }
+
+    .contaner .box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .portada {
+        min-height: 50vh;
+    }
+
+    .about-txt {
+        padding: 15px;
+    }
+
+    .inscripcion {
+        max-width: 100%;
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .mision2 {
+        flex-direction: column;
+        padding: 3  0px;  
+    }
+
+    .mision2-text {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .mision2-text h2 {
+        font-size: 28px; /* Ajustar aún más el tamaño del título para dispositivos móviles */
+    }
+
+    .mapa {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-txt h1 {
+        font-size: 28px;
+    }
+
+    .detalles{
+        margin-top: 0;
+    }
+
+    .presentacion {
+        font-size: 12px;
+    }
+
+    .contaner .box {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .portada {
+        min-height: 40vh;
+    }
+
+    .about-txt {
+        padding: 10px;
+    }
+
+    .inscripcion {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .mision2 {
+        flex-direction: column;
+    }
+
+    .mision2-text {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .mision2-text h2 {
+        font-size: 24px;
+        /* Ajuste adicional del tamaño del título para pantallas muy pequeñas */
+    }
+
+    .mapa {
+        width: 100%;
+    }
+}
+
+
+body.dark-mode section {
+    background-color: #363636;
+    color: #fff;
+}
+
+body.dark-mode section h2 {
+    color: #fff;
+}
+
+body.dark-mode section p {
+    color: #ccc;
+}
+
+/* Ajustes específicos para ciertas secciones */
+body.dark-mode section.portada {
+    background-color: #222;
+}
+
+body.dark-mode section.about {
+    background-color: #444;
+}
+
+body.dark-mode section.mision {
+    background-color: #555;
+}
+
+/* También puedes agregar ajustes específicos para las imágenes */
+body.dark-mode section img {
+    filter: brightness(70%);
+}
+
+body.dark-mode main {
+    background-color: #333;
+}
+
+/* Estilos del modo oscuro para el footer */
+body.dark-mode footer {
+    background-color: #292929;
+    color: #aaa;
+}
+
+body.dark-mode footer a {
+    color: #fdc21c;
+}
+
+body.dark-mode footer a:hover {
+    color: #fff;
+}
+
+.header-civic {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 6.4em;
+    text-align: center;
+    align-content: center;
+    background-color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mensaje-contenedor {
+    display: inline-block;
+    font-size: 2.0em;
+    font-weight: bold;
+    overflow: hidden;
+    width: 50%;
+    animation: slide-infinite 15s linear infinite;
+    /* Ajusta el ancho según sea necesario */
+}
+
+
+.mensaje {
+    display: inline-block;
+    font-size: 2.0em;
+    font-weight: bold;
+    color: #ffffff;
+    animation: slide-infinite 15s linear infinite;
+    /* Controla la velocidad de la animación */
+}
+
+
+@keyframes slide-infinite {
+    0% {
+        transform: translateX(100%);
+    }
+
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

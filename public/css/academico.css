@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.contact-content {
+    text-align: center;
+}
+
+.portada {
+    background-image: url(../imagenes/galeria9.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 0;
+}
+
+.texto {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    max-width: 700px;
+    font-size: 3rem;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+.about {
+    padding: 10px;
+}
+
+.about-txt>h2 {
+    font-size: 30px;
+}
+
+.about>h2 {
+    margin-left: 15px;
+    font-size: 30px;
+}
+
+.about>h3 {
+    font-size: 22px;
+    padding: 15px;
+}
+
+.about>p {
+    padding: 25px;
+    font-size: 17px;
+    color: #000000;
+    margin-bottom: 35px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-person {
+    flex-basis: 50%;
+    padding: 35px;
+}
+
+.about-txt {
+    padding: 15px;
+}
+
+.nombre {
+    color: #286bc2;
+    font-size: 25px;
+}
+
+.about-person-item {
+    text-align: center;
+}
+
+#ContePuntos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.h2 {
+    font-size: 35px;
+    color: #FFFFFF;
+    margin: 15px 0;
+    line-height: 1;
+}
+
+hr {
+    border: 1px solid #F56349;
+    width: 10%;
+    margin-bottom: 30px;
+}
+
+.about-person img {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.container-carousel {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.carruseles {
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+
+.slider-section {
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+.slider-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0, -50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+body.dark-mode section {
+    background-color: #363636;
+    color: #fff;
+}
+
+body.dark-mode section h2 {
+    color: #fff;
+}
+
+body.dark-mode section p {
+    color: #ccc;
+}
+
+/* Ajustes específicos para ciertas secciones */
+body.dark-mode section.portada {
+    background-color: #222;
+}
+
+body.dark-mode section.about {
+    background-color: #444;
+}
+
+body.dark-mode section.mision {
+    background-color: #555;
+}
+
+/* También puedes agregar ajustes específicos para las imágenes */
+body.dark-mode section img {
+    filter: brightness(70%);
+}
+
+body.dark-mode main {
+    background-color: #333;
+}
+
+/* Estilos del modo oscuro para el footer */
+body.dark-mode footer {
+    background-color: #292929;
+    color: #aaa;
+}
+
+body.dark-mode footer a {
+    color: #fdc21c;
+}
+
+body.dark-mode footer a:hover {
+    color: #fff;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+    left: -22px;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.carousel .card .img {
+    background: #8B53FF;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+}
+
+.card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+
+.carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+.carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+.profesores {
+    display: flex;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-top: -100px;
+    flex-wrap: wrap;
+}
+
+.text-below {
+    margin-top: 20px;
+    text-align: left;
+    line-height: 1.6;
+    color: #555;
+}
+
+.text {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+    color: #555;
+}
+
+.image {
+    flex: 1;
+    text-align: left;
+}
+
+.image img {
+    max-width: 100%;
+    height: 300px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+h1 {
+    text-align: left;
+    color: #333;
+    font-size: 35px;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #1ee917;
+}
+
+.recreo {
+    background-color: #26f058;
+}
+
+.mision {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.container .box {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    background: #fff;
+    padding: 40px;
+    padding: 100px 40px 60px;
+    box-shadow: 0 15px 45px 0px rgb(26 22 65 / 59%);
+}
+
+.container .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #383f47;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+.container .box:hover:before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+.container .box h2 {
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    font-size: 4em;
+    font-weight: 800;
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+.container .box:hover h2 {
+    opacity: 1;
+    color: #fff;
+    transform: translateY(-60px);
+}
+
+.container .box h3 {
+    position: relative;
+    font-size: 1.5em;
+    z-index: 2;
+    color: #333;
+    transition: 0.5s;
+}
+
+.container .box:hover h3,
+.container .box:hover p {
+    color: #fff;
+}
+
+.container .box p {
+    position: relative;
+    z-index: 2;
+    color: #555;
+    transition: 0.5s;
+}
+
+.texto {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    max-width: 700px;
+    font-size: 3rem;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+.horario {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.carousel .card {
+    background-color: rgb(110, 233, 212);
+}
+
+span {
+    text-align: center;
+}
+
+.titulo {
+    margin-top: 50px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    .about-person {
+        flex-basis: 100%;
+    }
+    .text {
+        padding-right: 0;
+    }
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image {
+        text-align: center;
+    }
+    .image img {
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .texto {
+        font-size: 2rem;
+    }
+    .about>p, .about>h3, .about>h2 {
+        font-size: 1rem;
+        padding: 15px;
+    }
+    .about>p {
+        padding: 15px;
+    }
+    table {
+        width: 100%;
+    }
+    .carousel .card {
+        height: auto;
+    }
+    .container .box h2 {
+        font-size: 2.5em;
+    }
+}
